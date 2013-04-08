@@ -1,0 +1,22 @@
+body
+{
+background:#E6E6E6;
+}
+.container
+{
+background:#fff;
+width:900px;
+border:1px solid #000;
+margin: 0 auto;
+height: 500px;
+text-align:center;
+}
+
+.capas
+{
+width:430px;
+height:450px;
+border: 1px solid #000;
+display:inline-block;
+vertical-align:top;
+}

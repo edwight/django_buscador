@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+</head>
+
+
+<body>
+
+<div id="formulario">
+<form action="." method="post">
+		<fieldset>
+			<label for="name">Busqueda</label>
+		{% csrf_token %}
+		{{ form.as_p }}
+			<!--<input type="text" id="name" placeholder="Busqueda Falcon" /> -->
+			<input type="submit" value="Buscar" />
+			
+		</fieldset>
+	</form>
+</div>
+
+<div id="tabla">
+<table align="center" border=1 width='70%' height='20%' >
+<tr>
+    <td><p align="center"><b>MUNICIPIOS:</b></p></td>
+    <td><p align="center"><b>PARROQUIAS:</b></p></td>
+    <td><p align="center"><b>LOCALIDADES:</b></p></td>
+</tr>
+{% for elemento in lista %}
+<tr>
+	<td><p align="center"><b>{{elemento.municipios}}</b></p></td>
+	 <td><p align="center"><b>{{elemento.parroquia}}</b></p></td>
+	<td><p align="center"><b>{{elemento.localidade}}</b></p></td>
+	 </tr>
+{% endfor %}
+</table>
+
+
+
+</body>
+</html>
+
